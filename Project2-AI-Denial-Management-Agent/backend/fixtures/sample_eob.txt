@@ -1,0 +1,13 @@
+EXPLANATION OF BENEFITS — THIS IS NOT A BILL
+UnitedHealthcare | Remittance Date: 06/22/2026
+
+Provider: Riverside Spine & Rehab | NPI: 1234567890
+Patient: John Doe | Member ID: W884512203
+Claim #: CLM-2026-04871 | Date of Service: 06/18/2026
+
+CPT 98941 (Chiropractic manipulation, 3-4 regions)
+Billed: $340.00 | Allowed: $0.00 | Paid: $0.00
+
+DENIAL REASON:
+CO-16 — Claim/service lacks information needed for adjudication
+N382 — Missing/incomplete/invalid patient identifier

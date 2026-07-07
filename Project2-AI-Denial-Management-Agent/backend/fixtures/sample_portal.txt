@@ -1,0 +1,13 @@
+From: claims-noreply@cigna.com
+Subject: Claim Determination — Action May Be Required
+
+Claim ID: E7729941 | Patient: Robert Chen | DOB: 05/02/1968
+Provider: MolarIQ Dental Partners
+Service: D2740 (Crown, porcelain/ceramic) | DOS: 06/01/2026
+Billed: $1,150.00 | Status: DENIED
+
+Reason Code: CO-50 — Service not deemed medically necessary
+Remark: N115 — Decision based on Local Coverage Determination.
+Supporting documentation (radiographs, clinical notes) not received.
+
+Appeal deadline: 180 days from determination date.
