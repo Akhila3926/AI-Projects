@@ -1,0 +1,1241 @@
+{
+  "payers": [
+    {
+      "id": "payer_aetna",
+      "name": "Aetna",
+      "common_denial_reasons": [
+        {
+          "code": "CO-16",
+          "desc": "Claim/service lacks information needed for adjudication"
+        },
+        {
+          "code": "CO-50",
+          "desc": "Non-covered service: not deemed medically necessary"
+        },
+        {
+          "code": "CO-197",
+          "desc": "Precertification/authorization absent"
+        }
+      ],
+      "scrub_rules": {
+        "modifier_required_cpt": [
+          "97110",
+          "97140",
+          "96372"
+        ],
+        "max_amount_per_visit": 900
+      },
+      "denial_rate": 0.13
+    },
+    {
+      "id": "payer_bcbs",
+      "name": "Blue Cross Blue Shield",
+      "common_denial_reasons": [
+        {
+          "code": "CO-29",
+          "desc": "Time limit for filing has expired"
+        },
+        {
+          "code": "CO-11",
+          "desc": "Diagnosis inconsistent with procedure"
+        }
+      ],
+      "scrub_rules": {
+        "modifier_required_cpt": [
+          "72148",
+          "73721",
+          "97110"
+        ],
+        "max_amount_per_visit": 1200
+      },
+      "denial_rate": 0.074
+    },
+    {
+      "id": "payer_uhc",
+      "name": "UnitedHealthcare",
+      "common_denial_reasons": [
+        {
+          "code": "CO-97",
+          "desc": "Benefit included in payment for another service already adjudicated"
+        },
+        {
+          "code": "CO-16",
+          "desc": "Claim/service lacks information needed for adjudication"
+        }
+      ],
+      "scrub_rules": {
+        "modifier_required_cpt": [
+          "83036",
+          "80053"
+        ],
+        "max_amount_per_visit": 600
+      },
+      "denial_rate": 0.109
+    },
+    {
+      "id": "payer_cigna",
+      "name": "Cigna",
+      "common_denial_reasons": [
+        {
+          "code": "CO-18",
+          "desc": "Duplicate claim/service"
+        },
+        {
+          "code": "CO-22",
+          "desc": "Coordination of benefits issue, other payer is primary"
+        }
+      ],
+      "scrub_rules": {
+        "modifier_required_cpt": [
+          "99214",
+          "20610"
+        ],
+        "max_amount_per_visit": 1000
+      },
+      "denial_rate": 0.145
+    }
+  ],
+  "patients": [
+    {
+      "id": "pt_001",
+      "name": "Sarah Jenkins",
+      "dob": "1985-03-12",
+      "phone": "555-0101",
+      "payer_id": "payer_aetna",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_002",
+      "name": "Marcus Lee",
+      "dob": "1978-11-02",
+      "phone": "555-0102",
+      "payer_id": "payer_bcbs",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_003",
+      "name": "Priya Patel",
+      "dob": "1990-07-22",
+      "phone": "555-0103",
+      "payer_id": "payer_uhc",
+      "is_new_patient": true
+    },
+    {
+      "id": "pt_004",
+      "name": "David Kim",
+      "dob": "1965-01-30",
+      "phone": "555-0104",
+      "payer_id": "payer_aetna",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_005",
+      "name": "Angela Brooks",
+      "dob": "1972-09-14",
+      "phone": "555-0105",
+      "payer_id": "payer_bcbs",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_006",
+      "name": "James Carter",
+      "dob": "1988-04-05",
+      "phone": "555-0106",
+      "payer_id": "payer_uhc",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_007",
+      "name": "Linda Nguyen",
+      "dob": "1995-12-19",
+      "phone": "555-0107",
+      "payer_id": "payer_aetna",
+      "is_new_patient": true
+    },
+    {
+      "id": "pt_008",
+      "name": "Robert Hughes",
+      "dob": "1959-06-08",
+      "phone": "555-0108",
+      "payer_id": "payer_bcbs",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_009",
+      "name": "Maria Gonzalez",
+      "dob": "1982-02-27",
+      "phone": "555-0109",
+      "payer_id": "payer_uhc",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_010",
+      "name": "Kevin O'Brien",
+      "dob": "1970-10-11",
+      "phone": "555-0110",
+      "payer_id": "payer_aetna",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_011",
+      "name": "Emily Tran",
+      "dob": "1993-08-16",
+      "phone": "555-0111",
+      "payer_id": "payer_bcbs",
+      "is_new_patient": true
+    },
+    {
+      "id": "pt_012",
+      "name": "Daniel Foster",
+      "dob": "1980-05-25",
+      "phone": "555-0112",
+      "payer_id": "payer_uhc",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_013",
+      "name": "Grace Park",
+      "dob": "1991-03-03",
+      "phone": "555-0113",
+      "payer_id": "payer_aetna",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_014",
+      "name": "William Scott",
+      "dob": "1963-12-01",
+      "phone": "555-0114",
+      "payer_id": "payer_bcbs",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_015",
+      "name": "Olivia Bennett",
+      "dob": "1987-07-09",
+      "phone": "555-0115",
+      "payer_id": "payer_uhc",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_016",
+      "name": "Henry Adams",
+      "dob": "1955-02-18",
+      "phone": "555-0116",
+      "payer_id": "payer_cigna",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_017",
+      "name": "Sophia Reyes",
+      "dob": "1998-09-30",
+      "phone": "555-0117",
+      "payer_id": "payer_cigna",
+      "is_new_patient": true
+    },
+    {
+      "id": "pt_018",
+      "name": "Thomas Wright",
+      "dob": "1975-06-21",
+      "phone": "555-0118",
+      "payer_id": "payer_aetna",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_019",
+      "name": "Natalie Cruz",
+      "dob": "1989-01-08",
+      "phone": "555-0119",
+      "payer_id": "payer_cigna",
+      "is_new_patient": false
+    },
+    {
+      "id": "pt_020",
+      "name": "Brian Walsh",
+      "dob": "1968-04-14",
+      "phone": "555-0120",
+      "payer_id": "payer_bcbs",
+      "is_new_patient": false
+    }
+  ],
+  "appointments": [
+    {
+      "id": "appt_001",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T09:00:00",
+      "status": "cancelled"
+    },
+    {
+      "id": "appt_002",
+      "patient_id": "pt_002",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T10:00:00",
+      "status": "booked"
+    },
+    {
+      "id": "appt_003",
+      "patient_id": "pt_003",
+      "provider": "Dr. Chen",
+      "date": "2026-06-28T09:30:00",
+      "status": "no_show_recovered"
+    },
+    {
+      "id": "appt_004",
+      "patient_id": "pt_004",
+      "provider": "Dr. Chen",
+      "date": "2026-06-29T14:00:00",
+      "status": "cancelled"
+    },
+    {
+      "id": "appt_005",
+      "patient_id": "pt_005",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-02T11:00:00",
+      "status": "booked"
+    },
+    {
+      "id": "appt_006",
+      "patient_id": "pt_006",
+      "provider": "Dr. Chen",
+      "date": "2026-06-27T08:00:00",
+      "status": "no_show_recovered"
+    },
+    {
+      "id": "appt_007",
+      "patient_id": "pt_007",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-03T13:00:00",
+      "status": "booked"
+    },
+    {
+      "id": "appt_008",
+      "patient_id": "pt_008",
+      "provider": "Dr. Chen",
+      "date": "2026-06-26T15:00:00",
+      "status": "completed"
+    },
+    {
+      "id": "appt_009",
+      "patient_id": "pt_009",
+      "provider": "Dr. Alvarez",
+      "date": "2026-06-25T10:00:00",
+      "status": "completed"
+    },
+    {
+      "id": "appt_010",
+      "patient_id": "pt_010",
+      "provider": "Dr. Chen",
+      "date": "2026-06-24T09:00:00",
+      "status": "completed"
+    },
+    {
+      "id": "appt_011",
+      "patient_id": "pt_011",
+      "provider": "Dr. Patel",
+      "date": "2026-06-23T08:30:00",
+      "status": "no_show_recovered"
+    },
+    {
+      "id": "appt_012",
+      "patient_id": "pt_012",
+      "provider": "Dr. Patel",
+      "date": "2026-06-22T16:00:00",
+      "status": "completed"
+    },
+    {
+      "id": "appt_013",
+      "patient_id": "pt_013",
+      "provider": "Dr. Patel",
+      "date": "2026-07-04T10:00:00",
+      "status": "booked"
+    },
+    {
+      "id": "appt_014",
+      "patient_id": "pt_016",
+      "provider": "Dr. Chen",
+      "date": "2026-06-21T09:00:00",
+      "status": "completed"
+    },
+    {
+      "id": "appt_015",
+      "patient_id": "pt_017",
+      "provider": "Dr. Alvarez",
+      "date": "2026-06-20T13:30:00",
+      "status": "no_show_recovered"
+    },
+    {
+      "id": "appt_016",
+      "patient_id": "pt_018",
+      "provider": "Dr. Patel",
+      "date": "2026-06-19T11:00:00",
+      "status": "completed"
+    },
+    {
+      "id": "appt_017",
+      "patient_id": "pt_019",
+      "provider": "Dr. Chen",
+      "date": "2026-06-18T15:00:00",
+      "status": "completed"
+    },
+    {
+      "id": "appt_018",
+      "patient_id": "pt_020",
+      "provider": "Dr. Alvarez",
+      "date": "2026-06-17T09:30:00",
+      "status": "completed"
+    },
+    {
+      "id": "appt_cd5435a1",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T12:12:32.635Z",
+      "status": "booked"
+    },
+    {
+      "id": "appt_83aab08e",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T12:13:16.649Z",
+      "status": "booked"
+    },
+    {
+      "id": "appt_a1070dec",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T12:13:41.573Z",
+      "status": "booked"
+    },
+    {
+      "id": "appt_bfad87e7",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T12:13:43.537Z",
+      "status": "booked"
+    },
+    {
+      "id": "appt_782cd766",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T12:16:20.027Z",
+      "status": "booked"
+    },
+    {
+      "id": "appt_3e759ad4",
+      "patient_id": "pt_002",
+      "provider": "Dr. Patel",
+      "date": "2026-07-10T11:00:00",
+      "status": "booked"
+    },
+    {
+      "id": "appt_bc8c6bea",
+      "patient_id": "pt_003",
+      "provider": "Dr. Chen",
+      "date": "2026-07-03T10:00:00",
+      "status": "booked"
+    },
+    {
+      "id": "appt_64bf6c52",
+      "patient_id": "pt_006",
+      "provider": "Dr. Chen",
+      "date": "2026-07-03T10:00:00",
+      "status": "booked"
+    },
+    {
+      "id": "appt_b6702801",
+      "patient_id": "pt_011",
+      "provider": "Dr. Patel",
+      "date": "2026-07-03T10:00:00",
+      "status": "booked"
+    },
+    {
+      "id": "appt_cc1bbf19",
+      "patient_id": "pt_017",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-03T10:00:00",
+      "status": "booked"
+    },
+    {
+      "id": "appt_7cdc66a5",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T12:21:57.195Z",
+      "status": "booked"
+    },
+    {
+      "id": "appt_300099fc",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T12:25:03.300Z",
+      "status": "booked"
+    },
+    {
+      "id": "appt_dd2c0f4a",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-08T09:00:00",
+      "status": "completed"
+    },
+    {
+      "id": "appt_3576d283",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T12:27:11.129Z",
+      "status": "completed"
+    },
+    {
+      "id": "appt_c6141e2e",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T12:27:24.239Z",
+      "status": "completed"
+    },
+    {
+      "id": "appt_6f9022a6",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T12:27:36.376Z",
+      "status": "completed"
+    },
+    {
+      "id": "appt_4ffa082f",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T12:30:44.251Z",
+      "status": "completed"
+    },
+    {
+      "id": "appt_aae399d4",
+      "patient_id": "pt_006",
+      "provider": "Dr. Chen",
+      "date": "2026-07-10",
+      "status": "cancelled"
+    },
+    {
+      "id": "appt_e7f767d0",
+      "patient_id": "pt_001",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01T12:33:09.311Z",
+      "status": "completed"
+    }
+  ],
+  "encounters": [
+    {
+      "id": "enc_001",
+      "patient_id": "pt_008",
+      "appointment_id": "appt_008",
+      "provider": "Dr. Chen",
+      "date": "2026-06-26",
+      "visit_type": "office_visit",
+      "chief_complaint": "Persistent lower back pain, 3 weeks",
+      "notes": "Patient reports lower back pain radiating to left leg, worsened by sitting. Exam shows reduced range of motion, positive straight leg raise on left. MRI lumbar spine ordered. Referred to physical therapy, started on NSAIDs and a short course of muscle relaxants.",
+      "diagnoses": [
+        "lumbar radiculopathy"
+      ],
+      "procedures": [
+        "office visit - established patient, level 3",
+        "x-ray lumbar spine",
+        "physical therapy evaluation"
+      ]
+    },
+    {
+      "id": "enc_002",
+      "patient_id": "pt_009",
+      "appointment_id": "appt_009",
+      "provider": "Dr. Alvarez",
+      "date": "2026-06-25",
+      "visit_type": "follow_up",
+      "chief_complaint": "Type 2 diabetes follow-up",
+      "notes": "Routine follow-up for T2DM management. A1c reviewed at 7.2%, down from 7.8%. Continuing metformin, discussed diet and exercise. Labs ordered for next visit including lipid panel.",
+      "diagnoses": [
+        "type 2 diabetes mellitus, controlled"
+      ],
+      "procedures": [
+        "office visit - established patient, level 3",
+        "hemoglobin a1c test"
+      ]
+    },
+    {
+      "id": "enc_003",
+      "patient_id": "pt_010",
+      "appointment_id": "appt_010",
+      "provider": "Dr. Chen",
+      "date": "2026-06-24",
+      "visit_type": "office_visit",
+      "chief_complaint": "Annual physical exam",
+      "notes": "Routine annual physical, no acute complaints. Vitals normal. Cholesterol panel ordered. Flu vaccine administered same visit.",
+      "diagnoses": [
+        "routine health exam"
+      ],
+      "procedures": [
+        "preventive visit - established patient",
+        "influenza vaccine administration"
+      ]
+    },
+    {
+      "id": "enc_004",
+      "patient_id": "pt_012",
+      "appointment_id": "appt_012",
+      "provider": "Dr. Patel",
+      "date": "2026-06-22",
+      "visit_type": "office_visit",
+      "chief_complaint": "Sore throat and fever for 2 days",
+      "notes": "Rapid strep test positive. Started on amoxicillin. Advised rest and fluids, follow up if symptoms persist beyond 5 days.",
+      "diagnoses": [
+        "streptococcal pharyngitis"
+      ],
+      "procedures": [
+        "office visit - established patient, level 2",
+        "rapid strep test"
+      ]
+    },
+    {
+      "id": "enc_005",
+      "patient_id": "pt_016",
+      "appointment_id": "appt_014",
+      "provider": "Dr. Chen",
+      "date": "2026-06-21",
+      "visit_type": "office_visit",
+      "chief_complaint": "Knee pain after fall, 1 week ago",
+      "notes": "Patient fell on stairs, reports right knee pain and mild swelling, able to bear weight. X-ray shows no fracture. Diagnosed with knee sprain, recommended RICE protocol and a knee brace, trigger point injection given for pain.",
+      "diagnoses": [
+        "sprain of right knee"
+      ],
+      "procedures": [
+        "office visit - established patient, level 4",
+        "x-ray knee",
+        "trigger point injection"
+      ]
+    },
+    {
+      "id": "enc_006",
+      "patient_id": "pt_018",
+      "appointment_id": "appt_016",
+      "provider": "Dr. Patel",
+      "date": "2026-06-19",
+      "visit_type": "office_visit",
+      "chief_complaint": "Chronic migraines, worsening frequency",
+      "notes": "Patient reports migraines increasing from 2/month to 8/month over the last quarter, with photophobia and nausea. Discussed preventive therapy options, started on a beta-blocker, ordered MRI brain to rule out secondary causes given the change in pattern.",
+      "diagnoses": [
+        "chronic migraine without aura"
+      ],
+      "procedures": [
+        "office visit - established patient, level 4",
+        "mri brain without contrast"
+      ]
+    },
+    {
+      "id": "enc_007",
+      "patient_id": "pt_019",
+      "appointment_id": "appt_017",
+      "provider": "Dr. Chen",
+      "date": "2026-06-18",
+      "visit_type": "office_visit",
+      "chief_complaint": "Annual wellness visit, mild hypertension noted",
+      "notes": "Routine wellness visit. Blood pressure 142/90 on recheck, above goal. Discussed lifestyle modification, started low-dose lisinopril. Comprehensive metabolic panel and lipid panel ordered.",
+      "diagnoses": [
+        "essential hypertension"
+      ],
+      "procedures": [
+        "preventive visit - established patient",
+        "comprehensive metabolic panel",
+        "lipid panel"
+      ]
+    },
+    {
+      "id": "enc_008",
+      "patient_id": "pt_020",
+      "appointment_id": "appt_018",
+      "provider": "Dr. Alvarez",
+      "date": "2026-06-17",
+      "visit_type": "office_visit",
+      "chief_complaint": "Shoulder pain, limited range of motion",
+      "notes": "Patient reports right shoulder pain for 6 weeks, worse with overhead activity. Exam consistent with rotator cuff tendinopathy. Ordered MRI shoulder, referred to physical therapy, prescribed NSAIDs.",
+      "diagnoses": [
+        "rotator cuff tendinopathy"
+      ],
+      "procedures": [
+        "office visit - established patient, level 3",
+        "mri shoulder without contrast",
+        "physical therapy evaluation"
+      ]
+    },
+    {
+      "id": "enc_68735d32",
+      "patient_id": "pt_001",
+      "appointment_id": "appt_dd2c0f4a",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-08",
+      "visit_type": "office_visit",
+      "chief_complaint": "Routine office visit",
+      "notes": "Patient seen for a routine office visit. No acute complaints reported. Standard evaluation performed, vitals reviewed, follow-up as needed.",
+      "diagnoses": [
+        "routine health exam"
+      ],
+      "procedures": [
+        "office visit - established patient, level 2"
+      ]
+    },
+    {
+      "id": "enc_bf8bffcd",
+      "patient_id": "pt_001",
+      "appointment_id": "appt_3576d283",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01",
+      "visit_type": "office_visit",
+      "chief_complaint": "Routine office visit",
+      "notes": "Patient seen for a routine office visit. No acute complaints reported. Standard evaluation performed, vitals reviewed, follow-up as needed.",
+      "diagnoses": [
+        "routine health exam"
+      ],
+      "procedures": [
+        "office visit - established patient, level 2"
+      ]
+    },
+    {
+      "id": "enc_b6eb2291",
+      "patient_id": "pt_001",
+      "appointment_id": "appt_c6141e2e",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01",
+      "visit_type": "office_visit",
+      "chief_complaint": "Routine office visit",
+      "notes": "Patient seen for a routine office visit. No acute complaints reported. Standard evaluation performed, vitals reviewed, follow-up as needed.",
+      "diagnoses": [
+        "routine health exam"
+      ],
+      "procedures": [
+        "office visit - established patient, level 2"
+      ]
+    },
+    {
+      "id": "enc_d3e15b07",
+      "patient_id": "pt_001",
+      "appointment_id": "appt_6f9022a6",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01",
+      "visit_type": "office_visit",
+      "chief_complaint": "Routine office visit",
+      "notes": "Patient seen for a routine office visit. No acute complaints reported. Standard evaluation performed, vitals reviewed, follow-up as needed.",
+      "diagnoses": [
+        "routine health exam"
+      ],
+      "procedures": [
+        "office visit - established patient, level 2"
+      ]
+    },
+    {
+      "id": "enc_dadb806a",
+      "patient_id": "pt_001",
+      "appointment_id": "appt_4ffa082f",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01",
+      "visit_type": "office_visit",
+      "chief_complaint": "Routine office visit",
+      "notes": "Patient seen for a routine office visit. No acute complaints reported. Standard evaluation performed, vitals reviewed, follow-up as needed.",
+      "diagnoses": [
+        "routine health exam"
+      ],
+      "procedures": [
+        "office visit - established patient, level 2"
+      ]
+    },
+    {
+      "id": "enc_55c920e8",
+      "patient_id": "pt_001",
+      "appointment_id": "appt_e7f767d0",
+      "provider": "Dr. Alvarez",
+      "date": "2026-07-01",
+      "visit_type": "office_visit",
+      "chief_complaint": "Routine office visit",
+      "notes": "Patient seen for a routine office visit. No acute complaints reported. Standard evaluation performed, vitals reviewed, follow-up as needed.",
+      "diagnoses": [
+        "routine health exam"
+      ],
+      "procedures": [
+        "office visit - established patient, level 2"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim_001",
+      "encounter_id": "enc_001",
+      "patient_id": "pt_008",
+      "payer_id": "payer_bcbs",
+      "status": "draft",
+      "codes": {
+        "icd10": [],
+        "cpt": []
+      },
+      "amount": 0,
+      "scrub_issues": [],
+      "denial_reason": null
+    },
+    {
+      "id": "claim_002",
+      "encounter_id": "enc_002",
+      "patient_id": "pt_009",
+      "payer_id": "payer_uhc",
+      "status": "draft",
+      "codes": {
+        "icd10": [],
+        "cpt": []
+      },
+      "amount": 0,
+      "scrub_issues": [],
+      "denial_reason": null
+    },
+    {
+      "id": "claim_003",
+      "encounter_id": "enc_003",
+      "patient_id": "pt_010",
+      "payer_id": "payer_aetna",
+      "status": "draft",
+      "codes": {
+        "icd10": [],
+        "cpt": []
+      },
+      "amount": 0,
+      "scrub_issues": [],
+      "denial_reason": null
+    },
+    {
+      "id": "claim_004",
+      "encounter_id": "enc_004",
+      "patient_id": "pt_012",
+      "payer_id": "payer_uhc",
+      "status": "draft",
+      "codes": {
+        "icd10": [],
+        "cpt": []
+      },
+      "amount": 0,
+      "scrub_issues": [],
+      "denial_reason": null
+    },
+    {
+      "id": "claim_005",
+      "encounter_id": "enc_005",
+      "patient_id": "pt_016",
+      "payer_id": "payer_cigna",
+      "status": "draft",
+      "codes": {
+        "icd10": [],
+        "cpt": []
+      },
+      "amount": 0,
+      "scrub_issues": [],
+      "denial_reason": null
+    },
+    {
+      "id": "claim_006",
+      "encounter_id": "enc_006",
+      "patient_id": "pt_018",
+      "payer_id": "payer_aetna",
+      "status": "draft",
+      "codes": {
+        "icd10": [],
+        "cpt": []
+      },
+      "amount": 0,
+      "scrub_issues": [],
+      "denial_reason": null
+    },
+    {
+      "id": "claim_007",
+      "encounter_id": "enc_007",
+      "patient_id": "pt_019",
+      "payer_id": "payer_cigna",
+      "status": "draft",
+      "codes": {
+        "icd10": [],
+        "cpt": []
+      },
+      "amount": 0,
+      "scrub_issues": [],
+      "denial_reason": null
+    },
+    {
+      "id": "claim_008",
+      "encounter_id": "enc_008",
+      "patient_id": "pt_020",
+      "payer_id": "payer_bcbs",
+      "status": "draft",
+      "codes": {
+        "icd10": [],
+        "cpt": []
+      },
+      "amount": 0,
+      "scrub_issues": [],
+      "denial_reason": null
+    },
+    {
+      "id": "claim_101",
+      "encounter_id": null,
+      "patient_id": "pt_005",
+      "payer_id": "payer_bcbs",
+      "status": "appealed",
+      "codes": {
+        "icd10": [
+          "M54.5"
+        ],
+        "cpt": [
+          "99214"
+        ]
+      },
+      "amount": 185.0,
+      "scrub_issues": [],
+      "denial_reason": null,
+      "paid_amount": 0,
+      "adjustment": 0,
+      "copay": 0,
+      "patient_responsibility": 0
+    },
+    {
+      "id": "claim_102",
+      "encounter_id": null,
+      "patient_id": "pt_002",
+      "payer_id": "payer_bcbs",
+      "status": "appealed",
+      "codes": {
+        "icd10": [
+          "M25.561"
+        ],
+        "cpt": [
+          "73721",
+          "20610"
+        ]
+      },
+      "amount": 410.0,
+      "scrub_issues": [],
+      "denial_reason": null,
+      "paid_amount": 0,
+      "adjustment": 0,
+      "copay": 0,
+      "patient_responsibility": 0
+    },
+    {
+      "id": "claim_103",
+      "encounter_id": null,
+      "patient_id": "pt_011",
+      "payer_id": "payer_bcbs",
+      "status": "appealed",
+      "codes": {
+        "icd10": [
+          "S93.401A"
+        ],
+        "cpt": [
+          "97110"
+        ]
+      },
+      "amount": 160.0,
+      "scrub_issues": [],
+      "denial_reason": null,
+      "paid_amount": 0,
+      "adjustment": 0,
+      "copay": 0,
+      "patient_responsibility": 0
+    },
+    {
+      "id": "claim_201",
+      "encounter_id": null,
+      "patient_id": "pt_013",
+      "payer_id": "payer_aetna",
+      "status": "appealed",
+      "codes": {
+        "icd10": [
+          "M17.11"
+        ],
+        "cpt": [
+          "20610",
+          "96372"
+        ]
+      },
+      "amount": 320.0,
+      "scrub_issues": [],
+      "denial_reason": null,
+      "paid_amount": 0,
+      "adjustment": 0,
+      "copay": 0,
+      "patient_responsibility": 0
+    },
+    {
+      "id": "claim_202",
+      "encounter_id": null,
+      "patient_id": "pt_001",
+      "payer_id": "payer_aetna",
+      "status": "appealed",
+      "codes": {
+        "icd10": [
+          "J45.909"
+        ],
+        "cpt": [
+          "94060"
+        ]
+      },
+      "amount": 145.0,
+      "scrub_issues": [],
+      "denial_reason": null,
+      "paid_amount": 0,
+      "adjustment": 0,
+      "copay": 0,
+      "patient_responsibility": 0
+    },
+    {
+      "id": "claim_301",
+      "encounter_id": null,
+      "patient_id": "pt_015",
+      "payer_id": "payer_uhc",
+      "status": "denied",
+      "codes": {
+        "icd10": [
+          "E11.9"
+        ],
+        "cpt": [
+          "83036"
+        ]
+      },
+      "amount": 95.0,
+      "scrub_issues": [],
+      "denial_code": "CO-50",
+      "denial_reason": "Non-covered service \u00e2\u20ac\u201d not deemed medically necessary",
+      "paid_amount": 0,
+      "adjustment": 0,
+      "copay": 0,
+      "patient_responsibility": 0
+    },
+    {
+      "id": "claim_302",
+      "encounter_id": null,
+      "patient_id": "pt_006",
+      "payer_id": "payer_uhc",
+      "status": "denied",
+      "codes": {
+        "icd10": [
+          "R51"
+        ],
+        "cpt": [
+          "80053",
+          "70551"
+        ]
+      },
+      "amount": 540.0,
+      "scrub_issues": [],
+      "denial_code": "CO-97",
+      "denial_reason": "Benefit included in payment for another service already adjudicated",
+      "paid_amount": 0,
+      "adjustment": 0,
+      "copay": 0,
+      "patient_responsibility": 0
+    },
+    {
+      "id": "claim_401",
+      "encounter_id": null,
+      "patient_id": "pt_017",
+      "payer_id": "payer_cigna",
+      "status": "appealed",
+      "codes": {
+        "icd10": [
+          "J06.9"
+        ],
+        "cpt": [
+          "99213"
+        ]
+      },
+      "amount": 110.0,
+      "scrub_issues": [],
+      "denial_reason": null,
+      "paid_amount": 0,
+      "adjustment": 0,
+      "copay": 0,
+      "patient_responsibility": 0
+    },
+    {
+      "id": "claim_402",
+      "encounter_id": null,
+      "patient_id": "pt_004",
+      "payer_id": "payer_cigna",
+      "status": "denied",
+      "codes": {
+        "icd10": [
+          "M54.16"
+        ],
+        "cpt": [
+          "99214",
+          "72100"
+        ]
+      },
+      "amount": 275.0,
+      "scrub_issues": [],
+      "denial_code": "CO-16",
+      "denial_reason": "Claim/service lacks information needed for adjudication",
+      "paid_amount": 0,
+      "adjustment": 0,
+      "copay": 0,
+      "patient_responsibility": 0
+    },
+    {
+      "id": "claim_727e99dd",
+      "encounter_id": "enc_005",
+      "patient_id": "pt_016",
+      "payer_id": "payer_cigna",
+      "status": "submitted",
+      "codes": {
+        "icd10": [
+          "S83.0"
+        ],
+        "cpt": [
+          "99214",
+          "73562",
+          "20526"
+        ]
+      },
+      "amount": 350.0,
+      "scrub_issues": [],
+      "denial_reason": null,
+      "paid_amount": 262.5,
+      "adjustment": 35.0,
+      "copay": 30.0,
+      "patient_responsibility": 52.5
+    },
+    {
+      "id": "claim_35747f32",
+      "encounter_id": "enc_001",
+      "patient_id": "pt_008",
+      "payer_id": "payer_bcbs",
+      "status": "submitted",
+      "codes": {
+        "icd10": [
+          "M54.17",
+          "M51.17"
+        ],
+        "cpt": [
+          "99213",
+          "72148",
+          "97001"
+        ]
+      },
+      "amount": 520.0,
+      "scrub_issues": [
+        "No issues found with diagnosis codes and procedure codes, and modifiers do not appear to be required for the listed procedures. However, the billed amount seems reasonable but requires more specific information about the location and insurance for a definitive assessment. Clinically, the diagnosis codes for back pain (M54.17, M51.17) are consistent with a procedure like an MRI (72148) and physical therapy (97001), and an office visit (99213)."
+      ],
+      "denial_reason": null,
+      "paid_amount": 390.0,
+      "adjustment": 52.0,
+      "copay": 30.0,
+      "patient_responsibility": 78.0
+    },
+    {
+      "id": "claim_39f813a5",
+      "encounter_id": "enc_68735d32",
+      "patient_id": "pt_001",
+      "payer_id": "payer_aetna",
+      "status": "submitted",
+      "codes": {
+        "icd10": [
+          "Z00.00"
+        ],
+        "cpt": [
+          "99212"
+        ]
+      },
+      "amount": 150.0,
+      "scrub_issues": [],
+      "denial_reason": null,
+      "paid_amount": 112.5,
+      "adjustment": 15.0,
+      "copay": 30.0,
+      "patient_responsibility": 22.5
+    },
+    {
+      "id": "claim_0494eb45",
+      "encounter_id": "enc_bf8bffcd",
+      "patient_id": "pt_001",
+      "payer_id": "payer_aetna",
+      "status": "submitted",
+      "codes": {
+        "icd10": [
+          "Z00.00"
+        ],
+        "cpt": [
+          "99212"
+        ]
+      },
+      "amount": 150.0,
+      "scrub_issues": [],
+      "denial_reason": null
+    },
+    {
+      "id": "claim_a2b8220d",
+      "encounter_id": "enc_b6eb2291",
+      "patient_id": "pt_001",
+      "payer_id": "payer_aetna",
+      "status": "submitted",
+      "codes": {
+        "icd10": [
+          "Z00.00"
+        ],
+        "cpt": [
+          "99212"
+        ]
+      },
+      "amount": 150.0,
+      "scrub_issues": [],
+      "denial_reason": null
+    },
+    {
+      "id": "claim_d32bd410",
+      "encounter_id": "enc_d3e15b07",
+      "patient_id": "pt_001",
+      "payer_id": "payer_aetna",
+      "status": "submitted",
+      "codes": {
+        "icd10": [
+          "Z00.00"
+        ],
+        "cpt": [
+          "99212"
+        ]
+      },
+      "amount": 150.0,
+      "scrub_issues": [],
+      "denial_reason": null
+    },
+    {
+      "id": "claim_e07464f3",
+      "encounter_id": "enc_dadb806a",
+      "patient_id": "pt_001",
+      "payer_id": "payer_aetna",
+      "status": "submitted",
+      "codes": {
+        "icd10": [
+          "Z00.00"
+        ],
+        "cpt": [
+          "99212"
+        ]
+      },
+      "amount": 150.0,
+      "scrub_issues": [],
+      "denial_reason": null
+    },
+    {
+      "id": "claim_5a990114",
+      "encounter_id": "enc_55c920e8",
+      "patient_id": "pt_001",
+      "payer_id": "payer_aetna",
+      "status": "submitted",
+      "codes": {
+        "icd10": [
+          "Z00.00"
+        ],
+        "cpt": [
+          "99212"
+        ]
+      },
+      "amount": 150.0,
+      "scrub_issues": [],
+      "denial_reason": null
+    }
+  ]
+}

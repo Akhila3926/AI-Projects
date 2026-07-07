@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+backend/venv/
+
+# Secrets
+backend/.env
+
+# Database (contains real patient data — never commit)
+backend/data_store/*.db
+backend/data_store/*.db-shm
+backend/data_store/*.db-wal
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.sw?

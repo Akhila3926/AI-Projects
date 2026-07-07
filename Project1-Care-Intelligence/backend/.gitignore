@@ -1,0 +1,8 @@
+.env
+venv/
+__pycache__/
+*.pyc
+*.pyo
+data_store/*.db
+data_store/*.db-shm
+data_store/*.db-wal
