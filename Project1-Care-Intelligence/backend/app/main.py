@@ -379,6 +379,15 @@ def scheduler_status():
     return {"running": _scheduler.running, "jobs": jobs}
 
 
+@app.post("/api/agents/denial-management/send-report")
+async def send_denial_report():
+    """Manually trigger the denial report email."""
+    from app.scheduler import autonomous_denial_job
+    loop = asyncio.get_event_loop()
+    result = await loop.run_in_executor(None, autonomous_denial_job)
+    return {"sent": True, "scanned": result["scanned"], "top3": result.get("top3_claims", [])}
+
+
 @app.post("/api/dev/reset-denied-claims")
 def reset_denied_claims():
     """Reset some appealed claims back to denied so the denial agent can be tested again."""

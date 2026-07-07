@@ -1513,6 +1513,27 @@ function AgentsView({ data, onRefresh }) {
               </button>
               {dmResult.feed_message && dmResult.processed == null && <ActionResult result={dmResult} />}
             </div>
+            <div className="drawer-divider" />
+            <div className="drawer-section">
+              <div className="drawer-section-title">Email Denial Report</div>
+              <p className="drawer-section-desc">Send top 3 denied claims report to your inbox now.</p>
+              <button className="ac-btn" style={{ '--ac-color': '#dc2626' }} disabled={dmLoading === 'report'}
+                onClick={async () => {
+                  setDmLoading('report')
+                  try {
+                    const r = await fetch('/api/agents/denial-management/send-report', { method: 'POST' })
+                    const d = await r.json()
+                    setDmResult({ feed_message: `Report sent — ${d.scanned} claims scanned, top 3 emailed to your inbox.` })
+                  } catch(e) {
+                    setDmResult({ feed_message: 'Failed to send report.' })
+                  } finally {
+                    setDmLoading(null)
+                  }
+                }}>
+                {dmLoading === 'report' ? <><SpinnerIcon /> Sending…</> : 'Send Report Now'}
+              </button>
+              {dmLoading !== 'report' && dmResult.feed_message?.includes('Report sent') && <div className="action-result ok">{dmResult.feed_message}</div>}
+            </div>
           </>
         )}
       </AgentDrawer>
